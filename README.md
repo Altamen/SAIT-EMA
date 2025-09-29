@@ -17,6 +17,7 @@ All possible speaker names: `F001, F002, F003, F004, F005, M001, M002, M003, M00
 ## Glossary
 
 The term `std_EMA` refers to a `numpy.ndarray` with the shape of `(num_frames, 12)`. 12 stands for the `x, y` coordinates of the six sensors: `tt, tb, td, lj, ul, ll`.
+Each speaker has exactly 962 `std_EMA`s.
 
 The term `nose_EMA` refers to a `numpy.ndarray` with the shape of `(num_frames, 2)`. It is the `x, y` coordinates of the `NOSE` sensor.
 
@@ -43,7 +44,7 @@ If index list is `None`, return a list containing all `std_EMA` of the current s
 std_EMA_list = EMA_Reader.get_std_EMA_list_by_index_list(index_list)
 ```
 
-Get a random `std_EMA`
+Get a random `std_EMA`.
 ```Python
 std_EMA = EMA_Reader.get_randn_std_EMA()
 ```
