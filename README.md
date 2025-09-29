@@ -16,7 +16,7 @@ All possible speaker names: `F001, F002, F003, F004, F005, M001, M002, M003, M00
 
 ## Glossary
 
-The term `std_EMA` refers to a `numpy.ndarray` with the shape of `(num_frames, 12)`. 12 stands for the `x, y` coordinates of the six sensors: `tt, tb, td, lj, ul, ll`.
+The term `std_EMA` refers to a `numpy.ndarray` with the shape of `(num_frames, 12)`. 12 stands for the `x, y` coordinates of the six sensors: `tt, tb, td, lj, ul, ll` (Tongue Tip, Tongue Body, Tongue Dorsum, Lower Jaw, Upper Lip, Lower Lip).
 Each speaker has exactly 962 `std_EMA`s.
 
 The term `nose_EMA` refers to a `numpy.ndarray` with the shape of `(num_frames, 2)`. It is the `x, y` coordinates of the `NOSE` sensor.
