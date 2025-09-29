@@ -20,11 +20,26 @@ The term `std_EMA` refers to a `numpy.ndarray` with the shape of `(num_frames, 1
 
 The term `nose_EMA` refers to a `numpy.ndarray` with the shape of `(num_frames, 2)`. It is the `x, y` coordinates of the `NOSE` sensor.
 
+The term "index" refers to the filename without extension. For example, for the file `0001.pos`, its index is `0001`. An "index list" is a Python list whose elements are all indices. For example, `["0001", "0002", "0900"]` is an index list.
+
 
 ## How to use
 
-**For getting `std_EMA`:
+#### For extracting `std_EMA`:
 
+Extracting `std_EMA` by providing the absolute path of the `.pos` file.
 ```Python
-EMA_Reader.get_std_EMA()
+EMA_Reader.get_std_EMA(path)
 ```
+
+Extracting `std_EMA` by providing its index.
+```Python
+EMA_Reader.get_std_EMA_by_index(index)
+```
+
+Get a list of `std_EMA` by providing the corresponding index list.
+If index list is `None`, return a list containing all `std_EMA` of the current speaker.
+```Python
+EMA_Reader.get_std_EMA_list_by_index_list(index_list)
+```
+
