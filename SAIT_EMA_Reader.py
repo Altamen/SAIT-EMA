@@ -73,7 +73,7 @@ class RawEMA_Reader():
     """
     def get_std_EMA_by_index(self, index):
         """
-        通过 index 获取对应的 standard EMA
+        Get the corresponding standard EMA by index.
         """
         EMA_path = self._get_raw_EMA_path_from_index(index)
         std_EMA = self.get_std_EMA(EMA_path)
@@ -239,7 +239,7 @@ class SAIT_RawEMA_Reader(RawEMA_Reader):
             raw_EMA_path,
             np.float32,
             offset=header_size
-        ) # EMA_data 此时为一维 numpy 数组
+        ) # EMA_data is now a one-dimensional numpy ndarray
 
         EMA_data = EMA_data.reshape((-1, 112))
         """
